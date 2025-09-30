@@ -1,12 +1,22 @@
-{% extends "base.html" %} {% block content %}
-About Outfit Price Predictor
-Welcome to Outfit Price Predictor! 💃🕺
+{% extends "base.html" %}
 
-This website helps you estimate the price of your favorite outfits using Machine Learning and a dataset of popular clothing items. Simply select the type, brand, material, size, and season, and get an instant price prediction.
-
-Our goal is to make shopping easier and more transparent by predicting realistic outfit prices. We use a Random Forest Regression model trained on real fashion data to give accurate results.
-
-Explore our gallery, predict your outfit prices, and enjoy a colorful, interactive experience!
-
-Try Predicting Now
+{% block content %}
+<div class="container">
+  <div class="panel">
+    <h1>About Outfit Price Predictor</h1>
+    <p>
+      Welcome to <strong>Outfit Price Predictor</strong>! 💃🕺<br><br>
+      This website helps you estimate the price of your favorite outfits using <strong>Machine Learning</strong> and a dataset of popular clothing items.  
+      Simply select the type, brand, material, size, and season, and get an instant price prediction.  
+    </p>
+    <p>
+      Our goal is to make shopping easier and more transparent by predicting realistic outfit prices.  
+      We use a <strong>Random Forest Regression model</strong> trained on real fashion data to give accurate results.  
+    </p>
+    <p>
+      Explore our gallery, predict your outfit prices, and enjoy a colorful, interactive experience!  
+    </p>
+    <a href="{{ url_for('predict') }}" class="button">Try Predicting Now</a>
+  </div>
+</div>
 {% endblock %}
