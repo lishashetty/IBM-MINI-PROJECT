@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div class="panel">
+<h1>Predict Outfit Price</h1>
+<form method="POST">
+<select name="type" required>
+  <option value="">Select Outfit Type</option>
+  <option>T-Shirt</option>
+  <option>Jeans</option>
+  <option>Dress</option>
+  <option>Jacket</option>
+  <option>Shirt</option>
+  <option>Skirt</option>
+</select>
+
+<select name="brand" required>
+  <option value="">Select Brand</option>
+  <option>Nike</option>
+  <option>Zara</option>
+  <option>Levis</option>
+  <option>Adidas</option>
+</select>
+
+<select name="material" required>
+  <option value="">Select Material</option>
+  <option>Cotton</option>
+  <option>Silk</option>
+  <option>Denim</option>
+  <option>Leather</option>
+</select>
+
+<select name="size" required>
+  <option value="">Select Size</option>
+  <option>S</option>
+  <option>M</option>
+  <option>L</option>
+  <option>XL</option>
+</select>
+
+<select name="season" required>
+  <option value="">Select Season</option>
+  <option>Summer</option>
+  <option>Winter</option>
+  <option>Spring</option>
+</select>
+
+<button class="button" type="submit">Predict Price</button>
+</form>
+
+{% if predicted_price %}
+<div class="result">
+<h2>Predicted Price: ₹{{ predicted_price }}</h2>
+
+
+</div>
+{% endif %}
+</div>
+</div>
+{% endblock %}
+
